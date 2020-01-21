@@ -23,6 +23,15 @@ namespace Karaoke01
             }
             return command;
         }
+        public static SQLiteDataAdapter GetDataAdapter(SQLiteConnection connection, string commandText)
+        {
+            return GetDataAdapter(connection, commandText, null);
+        }
+        public static SQLiteDataAdapter GetDataAdapter(SQLiteConnection connection, string commandText, Dictionary<string, string> parameters)
+        {
+            var command = GetCommand(connection, commandText, parameters);
+            return new SQLiteDataAdapter(command);
+        }
         public static void ExecuteNonQuery(SQLiteConnection connection, string query)
         {
             ExecuteNonQuery(connection, query, null);

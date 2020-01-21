@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Karaoke01": {
+      "commandName": "Project",
+      "commandLineArgs": "ProcessZip"
+    }
+  }
+}
